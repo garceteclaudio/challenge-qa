@@ -9,7 +9,8 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 ### Pre-requisitos
 
 
-Es necesario tener instalado [node](https://nodejs.org/en/download/) para instalar y ejecutar el ciclo de vida del proyecto.
+- Es necesario tener instalado [node](https://nodejs.org/en/download/) para instalar y ejecutar el proyecto.
+- Se requiere la version 103 de google chrome
 
 
 ### Instalacion
