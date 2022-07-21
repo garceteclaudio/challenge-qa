@@ -1,0 +1,19 @@
+{
+  "name": "challengeqa",
+  "version": "1.0.0",
+  "description": "Challenge QA KATAPULT COMMERCE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Claudio Rodolfo Garcete",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^8.5.0",
+    "chai": "^4.3.6",
+    "selenium-webdriver": "^4.3.1"
+  },
+  "devDependencies": {
+    "chromedriver": "^103.0.0"
+  }
+}
