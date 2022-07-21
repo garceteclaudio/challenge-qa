@@ -42,8 +42,7 @@ Las pruebas son ejecutadas localmente.
 
 - Abrir el archivo cucumber-report.html
 
-![Screenshot](report.png)
-![Screenshot](report.png)
+![Screenshot](reports.png)
 ## Video demo
 
 [![IMAGE ALT TEXT](youtube.png)](https://www.youtube.com/watch?v=U52aAa9VkEk&list=RDU52aAa9VkEk&start_radio=1 "Testing")
