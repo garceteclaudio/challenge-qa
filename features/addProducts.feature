@@ -1,7 +1,7 @@
 Feature: Add products
 
   Scenario: Add products to my car
-    When I lanch open zapatoca website
+    When I open zapatoca website
     Then I should assert Bienvenido a Zapatoca
     When I type my email
     When I type my password

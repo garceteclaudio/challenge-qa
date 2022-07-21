@@ -39,6 +39,9 @@ Las pruebas son ejecutadas localmente.
 
 ### Reporte de pruebas
 
+- Abrir el archivo cucumber-report.html
+
+![Screenshot](report.png)
 ## Video demo
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=U52aAa9VkEk&list=RDU52aAa9VkEk&start_radio=1 "Testing")
