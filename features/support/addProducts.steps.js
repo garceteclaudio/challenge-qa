@@ -9,65 +9,65 @@ let StaticDriver = require("../../pageObjects/staticDriver");
 
 
 When('I add five products', {timeout: 10 * 5000},  async function () {
-    Thread.sleep(2000);
+  Thread.sleep(2000);
 
-    //Limpiar carrito
-    let element = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[1]/div[2]/div[2]/div[2]/div[2]/button/div/span`));             
-    let text = await element.getText();
+  //Limpiar carrito
+  let element = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[1]/div[2]/div[2]/div[2]/div[2]/button/div/span`));             
+  let text = await element.getText();
 
-    console.log(`Cantidad productos: ${text}`);
-  
-    if (Number(text) > 0) {
-      let carritoElement = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[1]/div[2]/div[2]/div[2]/div[2]/button`));
-      await StaticDriver.driver.executeScript("arguments[0].click()",carritoElement);
-  
-      Thread.sleep(2000);
-      let vaciarCarritoElement = await StaticDriver.driver.findElement(By.id(`clean-cart`));
-      await StaticDriver.driver.executeScript("arguments[0].click()",vaciarCarritoElement);
-    
-  
-      let siEstoySeguroElement = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[3]/div[2]/div/button[2]`));
-      await StaticDriver.driver.executeScript("arguments[0].click()",siEstoySeguroElement);
-  
-  
-      let closeFrame = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`));
-      await StaticDriver.driver.executeScript("arguments[0].click()",closeFrame);
-      
-      Thread.sleep(2000);
-    }else{
-      console.log("No hay productos")
-    }
-  
+  console.log(`Cantidad productos: ${text}`);
+
+  if (Number(text) > 0) {
+    let carritoElement = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[1]/div[2]/div[2]/div[2]/div[2]/button`));
+    await StaticDriver.driver.executeScript("arguments[0].click()",carritoElement);
+
     Thread.sleep(2000);
+    let vaciarCarritoElement = await StaticDriver.driver.findElement(By.id(`clean-cart`));
+    await StaticDriver.driver.executeScript("arguments[0].click()",vaciarCarritoElement);
   
-    let increaseProduct = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[1]/div/div/div/div[1]/div/div/button[2]`));
-    await StaticDriver.driver.executeScript("arguments[0].click()",increaseProduct);
-  
+
+    let siEstoySeguroElement = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[3]/div[2]/div/button[2]`));
+    await StaticDriver.driver.executeScript("arguments[0].click()",siEstoySeguroElement);
+
+
+    let closeFrame = await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`));
+    await StaticDriver.driver.executeScript("arguments[0].click()",closeFrame);
     
-    let element1 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[1]/div/div/div/div[1]/div/button`));
-    await StaticDriver.driver.executeScript("arguments[0].click()",element1);
-    await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[1]/div/div[2]/div[2]/div/div/div[2]/h3`)).click();
     Thread.sleep(2000);
-    // await driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`)).click();
-    
+  }else{
+    console.log("No hay productos")
+  }
+
+  Thread.sleep(2000);
+
+  let increaseProduct = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[1]/div/div/div/div[1]/div/div/button[2]`));
+  await StaticDriver.driver.executeScript("arguments[0].click()",increaseProduct);
+
   
-    let element2 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[2]/div/div/div/div[1]/div/button`));
-    await StaticDriver.driver.executeScript("arguments[0].click()",element2);
-    Thread.sleep(2000);
-    // await driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`)).click();
+  let element1 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[1]/div/div/div/div[1]/div/button`));
+  await StaticDriver.driver.executeScript("arguments[0].click()",element1);
+  await StaticDriver.driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[1]/div/div[2]/div[2]/div/div/div[2]/h3`)).click();
+  Thread.sleep(2000);
+  // await driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`)).click();
   
-    
-    let element3 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[4]/div/div/div/div[1]/div/button`));
-    await StaticDriver.driver.executeScript("arguments[0].click()",element3);
-    Thread.sleep(2000);
-    // await driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`)).click();
-    
-    let element4 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-3"]/section/div[2]/div/div/div[1]/div/div/div/div[1]/div/button`));
-    await StaticDriver.driver.executeScript("arguments[0].click()",element4);
+
+  let element2 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[2]/div/div/div/div[1]/div/button`));
+  await StaticDriver.driver.executeScript("arguments[0].click()",element2);
+  Thread.sleep(2000);
+  // await driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`)).click();
+
   
+  let element3 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-2"]/section/div[2]/div/div/div[4]/div/div/div/div[1]/div/button`));
+  await StaticDriver.driver.executeScript("arguments[0].click()",element3);
+  Thread.sleep(2000);
+  // await driver.findElement(By.xpath(`//*[@id="__layout"]/div/div[3]/div[2]/header/button`)).click();
   
-  
-  });
+  let element4 = await StaticDriver.driver.findElement(By.xpath(`//*[@id="i60te-2-3"]/section/div[2]/div/div/div[1]/div/div/div/div[1]/div/button`));
+  await StaticDriver.driver.executeScript("arguments[0].click()",element4);
+
+
+
+});
   
   
   

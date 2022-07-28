@@ -63,16 +63,15 @@ class Login {
 
 
     async asserErrorMessage(){        
-        
+      Thread.sleep(1000);
 
       let element = await StaticDriver.driver.findElement(By.xpath(`(//div[@class='alert__text'][contains(text(),'Contraseña inválida. Si no recuerdas la contraseña')])[2]`));
       let text = await element.getText();
      
-      console.log(`text to assert : ${text}`);
+      // - actual, +expected 
+      assert.equal(text , "Contraseña inválida. Si no recuerdas la contraseña podemos generarte una nueva.", "Mensajes deben ser iguales.");
 
-      assert.equal(text , " Contraseña inválida. Si no recuerdas la contraseña podemos generarte una nueva. ");
-
-      Thread.sleep(1000);
+      Thread.sleep(3000);
   }    
 
 

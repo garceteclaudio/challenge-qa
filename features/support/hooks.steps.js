@@ -3,11 +3,11 @@ const { performance } = require('perf_hooks');
 
 let staticDriver = require("../../pageObjects/staticDriver");
 
-
+setDefaultTimeout(60 * 1000);
 
 let startTime;
 
-Before( async function() {
+Before( {timeout: 60 * 1000}, async function() {
   startTime = performance.now()
 
   console.log(`----------------------------------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ Before( async function() {
   await staticDriver.driver.manage().setTimeouts({implicit: (9000)});
 });
 
-After( async function() {
+After( {timeout: 60 * 1000}, async function() {
 
 
   console.log(`----------------------------------------------------------------------------------------------------------------
