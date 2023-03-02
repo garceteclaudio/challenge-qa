@@ -10,8 +10,9 @@ Estas instrucciones te permitirán obtener una copia del proyecto en funcionamie
 
 
 - Es necesario tener instalado [node](https://nodejs.org/en/download/) para instalar y ejecutar el proyecto.
-- Se requiere la version 103 de google chrome
-
+- npm install -g chromedriver
+- npm uninstall -g chromedriver
+- Se requiere la version 109 de google chrome
 
 ### Instalacion
 
