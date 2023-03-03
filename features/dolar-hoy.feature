@@ -1,4 +1,4 @@
-Feature: Dolar hoy app
+Feature: Dolar hoy
 
   Scenario: Obtener cotizacion del dolar blue
     Given Estoy en la pagina de dolar hoy

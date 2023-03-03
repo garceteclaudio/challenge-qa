@@ -3,8 +3,11 @@ const {Builder, Key, By, Capabilities, Alert} = require('selenium-webdriver');
 
 let StaticDriver = require("../../pageObjects/staticDriver");
 
+var fs = require('fs');
+
 let cotizacionDolarBlueCompra= 0;
 let cotizacionDolarBlueVenta= 0;
+let myFile="./generated/cotizacion-dolar.txt"
 
 Given('Estoy en la pagina de dolar hoy', {timeout: 4 * 5000},  async function () {
     await StaticDriver.driver.get("https://dolarhoy.com/");
@@ -25,7 +28,39 @@ When('Obtengo la cotizacion', {timeout: 4 * 5000},  async function () {
 });
 
 Then('Guardo el dato en un archivo txt', {timeout: 4 * 5000},  async function () {
+    let date_time = new Date();
+    // get current date
+    // adjust 0 before single digit date
+    let date = ("0" + date_time.getDate()).slice(-2);
+
+    // get current month
+    let month = ("0" + (date_time.getMonth() + 1)).slice(-2);
+
+    // get current year
+    let year = date_time.getFullYear();
+
+    // get current hours
+    let hours = date_time.getHours();
+
+    // get current minutes
+    let minutes = date_time.getMinutes();
+
+    // get current seconds
+    let seconds = date_time.getSeconds();
+
+    // prints date in YYYY-MM-DD format
+    let yearMonthDate = year + "-" + month + "-" + date;
+    // prints date & time in YYYY-MM-DD HH:MM:SS format
+    let yearMonthDateHoursMinutesSeconds = year + "-" + month + "-" + date + " " + hours + ":" + minutes + ":" + seconds;
+
+    console.log(yearMonthDate);
+    console.log(yearMonthDateHoursMinutesSeconds);
+
+
     console.log(`\n\n\n\n\nCotizacion compra: ${cotizacionDolarBlueCompra}\n\n\n\n`);
 
     console.log(`\n\n\n\n\nCotizacion venta: ${cotizacionDolarBlueVenta}\n\n\n\n`);
+
+        // Append data to file
+    fs.appendFileSync(myFile, `\nFecha: ${yearMonthDateHoursMinutesSeconds}\nDolar blue compra: ${cotizacionDolarBlueCompra}\nDolar blue venta: ${cotizacionDolarBlueVenta}`, 'utf8');
 });
