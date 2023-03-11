@@ -1,6 +1,6 @@
 # Challenge QA
 
-Este es un proyecto de pruebas automatizadas de la pagina web https://staging-zapatoca.miaguila.com/, los cuales se encuantran desarrollados por Claudio Rodolfo Garcete, principalmente con Selenium y Cucumber. Los test se ejecutan de manera local.
+Este es un proyecto de pruebas automatizadas de la pagina web https://dolarhoy.com/, los cuales se encuantran desarrollados por Claudio Rodolfo Garcete, principalmente con Selenium y Cucumber. Los test se ejecutan de manera local.
 
 ## Comenzando
 
@@ -46,9 +46,7 @@ Las pruebas son ejecutadas localmente.
 ![Screenshot](reports.png)
 ## Video demo
 
-[![IMAGE ALT TEXT](youtube.png)](https://www.youtube.com/watch?v=lmnR0R6zsOk "Testing")
-
-
+[![IMAGE ALT TEXT](dolar-hoy-web.png)](https://www.youtube.com/watch?v=lmnR0R6zsOk "Testing")
 
 ## Construido con
 * [Selenium Webdriver](https://www.selenium.dev/downloads/) - Framework E2E utilizado
