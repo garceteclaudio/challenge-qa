@@ -9,6 +9,11 @@ let cotizacionDolarBlueCompra= 0;
 let cotizacionDolarBlueVenta= 0;
 let myFile="./generated/cotizacion-dolar.txt"
 
+Given('Test {string} and {string}', {timeout: 4 * 30000},  async function (user, password) {
+  
+    console.log(`User: ${user}\npasswrd ${password}`);
+  });
+
 Given('Estoy en la pagina de dolar hoy', {timeout: 4 * 5000},  async function () {
     await StaticDriver.driver.get("https://dolarhoy.com/");
 });
