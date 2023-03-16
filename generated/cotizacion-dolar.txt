@@ -11,3 +11,6 @@ Dolar blue venta: $373
 Fecha: 2023-03-11 17:49:29
 Dolar blue compra: $369
 Dolar blue venta: $373
+Fecha: 2023-03-16 15:38:5
+Dolar blue compra: $379
+Dolar blue venta: $383
